@@ -1,0 +1,7 @@
+VoHoangKim_CV_AI-Backend.pdf
+docs/
+.venv-tools/
+__pycache__/
+*.pyc
+.DS_Store
+.claude/

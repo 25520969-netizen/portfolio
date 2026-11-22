@@ -1,0 +1,111 @@
+/* Design tokens — spec §3. Light on :root, dark via system preference or explicit choice. */
+@font-face {
+  font-family: "Space Grotesk Fallback";
+  src: local("Arial");
+  size-adjust: 104%;
+  ascent-override: 92%;
+  descent-override: 24%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "JetBrains Mono Fallback";
+  src: local("Menlo"), local("Courier New");
+  size-adjust: 98%;
+  ascent-override: 102%;
+  descent-override: 30%;
+  line-gap-override: 0%;
+}
+
+:root {
+  color-scheme: light;
+  --bg: #f6f5f1;
+  --surface: #ffffff;
+  --surface-2: #efede7;
+  --text: #111418;
+  --muted: #5b6470;
+  --border: #e2e0d9;
+  --border-strong: #c9c6bd;
+  --primary: #0b7a7a;
+  --primary-contrast: #ffffff;
+  --primary-soft: #0fa3a31a;
+  --accent-decor: #0fa3a3;
+  --success: #1e7f4b;
+  --warn: #a15c07;
+  --danger: #b42318;
+  --focus: #0b7a7a;
+  --shadow-raised: 0 1px 2px rgb(17 20 24 / 0.06), 0 8px 24px rgb(17 20 24 / 0.06);
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10: 128px;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-pill: 999px;
+
+  --dur-press: 120ms;
+  --dur-fade: 200ms;
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+
+  --font-sans: "Space Grotesk", "Space Grotesk Fallback", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "JetBrains Mono Fallback", ui-monospace, Menlo, monospace;
+
+  --fs-display: clamp(2.5rem, 6vw, 4.5rem);
+  --fs-h2: clamp(1.75rem, 3.5vw, 2.5rem);
+  --fs-h3: 1.375rem;
+  --fs-body-lg: 1.125rem;
+  --fs-body: 1rem;
+  --fs-small: 0.875rem;
+  --fs-mono-sm: 0.8125rem;
+  --fs-stat: clamp(1.75rem, 4vw, 2.5rem);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #111418;
+    --surface: #181c22;
+    --surface-2: #1f242b;
+    --text: #e8eaed;
+    --muted: #9aa3ae;
+    --border: #2a3038;
+    --border-strong: #3a414b;
+    --primary: #2cc7c7;
+    --primary-contrast: #0a0d10;
+    --primary-soft: #2cc7c71f;
+    --accent-decor: #2cc7c7;
+    --success: #4ade80;
+    --warn: #fbbf24;
+    --danger: #f97066;
+    --focus: #2cc7c7;
+    --shadow-raised: none;
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #111418;
+  --surface: #181c22;
+  --surface-2: #1f242b;
+  --text: #e8eaed;
+  --muted: #9aa3ae;
+  --border: #2a3038;
+  --border-strong: #3a414b;
+  --primary: #2cc7c7;
+  --primary-contrast: #0a0d10;
+  --primary-soft: #2cc7c71f;
+  --accent-decor: #2cc7c7;
+  --success: #4ade80;
+  --warn: #fbbf24;
+  --danger: #f97066;
+  --focus: #2cc7c7;
+  --shadow-raised: none;
+}

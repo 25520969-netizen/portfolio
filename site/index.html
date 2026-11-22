@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+  (function (d) {
+    var r = d.documentElement;
+    r.classList.remove('no-js'); r.classList.add('js');
+    function get(k) { try { return localStorage.getItem('vhk.' + k); } catch (e) { return null; } }
+    var t = get('theme');
+    if (t === 'light' || t === 'dark') r.setAttribute('data-theme', t);
+    var q = new URLSearchParams(location.search).get('lang'), s = get('lang');
+    var l = (q === 'en' || q === 'vi') ? q : (s === 'en' || s === 'vi') ? s
+          : ((navigator.language || '').toLowerCase().indexOf('vi') === 0 ? 'vi' : 'en');
+    r.lang = l;
+    if (l === 'vi') {
+      r.classList.add('i18n-pending');
+      var p = d.createElement('link');
+      p.rel = 'preload'; p.as = 'fetch'; p.href = 'assets/i18n/vi.json'; p.crossOrigin = 'anonymous';
+      d.head.appendChild(p);
+      setTimeout(function () { r.classList.remove('i18n-pending'); }, 1500);
+    }
+  })(document);
+  </script>
+  <title>Vo Hoang Kim — AI &amp; Backend Developer</title>
+  <meta name="description" content="AI &amp; Backend Developer building LLM/VLM pipelines, semantic search and FastAPI services. UIT Honors, 2× VOI national prize.">
+  <meta name="theme-color" content="#F6F5F1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#111418" media="(prefers-color-scheme: dark)">
+  <link rel="alternate" hreflang="en" href="https://25520969-netizen.github.io/portfolio/">
+  <link rel="alternate" hreflang="vi" href="https://25520969-netizen.github.io/portfolio/?lang=vi">
+  <link rel="alternate" hreflang="x-default" href="https://25520969-netizen.github.io/portfolio/">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://25520969-netizen.github.io/portfolio/">
+  <meta property="og:title" content="Vo Hoang Kim — AI &amp; Backend Developer">
+  <meta property="og:description" content="AI &amp; Backend Developer building LLM/VLM pipelines, semantic search and FastAPI services. UIT Honors, 2× VOI national prize.">
+  <meta property="og:image" content="https://25520969-netizen.github.io/portfolio/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="vi_VN">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;family=Space+Grotesk:wght@400..700&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <script type="module" src="assets/js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
+
+  <svg hidden>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-flag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V4m0 0h11l-2 4 2 4H5"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h8"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+    <symbol id="i-arrow-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></symbol>
+    <symbol id="i-replay" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 1 0 3-6.2M4 4v4h4"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></symbol>
+  </svg>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top">
+        <span class="brand-tile" aria-hidden="true">VHK</span>
+        <span class="brand-name" data-i18n="brand.name">Vo Hoang Kim</span>
+      </a>
+      <nav class="main-nav" aria-label="Main" data-i18n-attr="aria-label:nav.label">
+        <ul>
+          <li><a class="nav-link" href="#work" data-i18n="nav.work">Work</a></li>
+          <li><a class="nav-link" href="#skills" data-i18n="nav.skills">Skills</a></li>
+          <li><a class="nav-link" href="#honors" data-i18n="nav.honors">Honors</a></li>
+          <li><a class="nav-link" href="#about" data-i18n="nav.about">About</a></li>
+          <li><a class="nav-link" href="#contact" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-tools">
+        <div role="group" aria-label="Language / Ngôn ngữ" class="lang-switch js-only">
+          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang="vi" aria-pressed="false">VI</button>
+        </div>
+        <button type="button" id="theme-toggle" class="icon-btn js-only" aria-label="Switch to dark theme"><svg aria-hidden="true" focusable="false"><use href="#i-moon"/></svg></button>
+        <button type="button" id="menu-toggle" class="icon-btn menu-toggle js-only" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu"><svg aria-hidden="true" focusable="false"><use href="#i-menu"/></svg></button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="mobile-menu" hidden>
+      <ul class="container">
+        <li><a class="mobile-link" href="#work" data-i18n="nav.work">Work</a></li>
+        <li><a class="mobile-link" href="#skills" data-i18n="nav.skills">Skills</a></li>
+        <li><a class="mobile-link" href="#honors" data-i18n="nav.honors">Honors</a></li>
+        <li><a class="mobile-link" href="#about" data-i18n="nav.about">About</a></li>
+        <li><a class="mobile-link" href="#contact" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main">
+    <div id="top-sentinel" aria-hidden="true"></div>
+
+    <section id="top" class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <p class="mono-sm muted hero-role" data-i18n="hero.role">AI &amp; Backend Developer · Ho Chi Minh City, Vietnam</p>
+        <div class="grid-12">
+          <div class="hero-copy">
+            <h1 id="hero-title" data-i18n="hero.title">I build AI systems that don't guess.</h1>
+            <p class="lead" data-i18n="hero.sub">LLM/VLM pipelines, semantic search and FastAPI services — with a deterministic, tested layer around every model.</p>
+          </div>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn--primary" href="#work"><span data-i18n="cta.work">See the work</span><svg aria-hidden="true" focusable="false"><use href="#i-arrow-down"/></svg></a>
+          <a class="btn btn--secondary" href="assets/cv/VoHoangKim_CV.pdf" download><svg aria-hidden="true" focusable="false"><use href="#i-download"/></svg><span data-i18n="cta.cv">Download CV</span><span class="mono-sm cv-size" data-cv-size>PDF · ~69 KB</span></a>
+          <span class="email-chip">
+            <span id="email-hero" class="mono">vohoangkim3103@gmail.com</span>
+            <button type="button" class="icon-btn js-only" data-copy="email-hero" data-i18n-attr="aria-label:cta.copy" aria-label="Copy email"><svg aria-hidden="true" focusable="false"><use href="#i-copy"/></svg></button>
+          </span>
+        </div>
+
+        <figure class="trace" role="img" data-i18n-attr="aria-label:trace.aria" aria-label="Pipeline trace: a request for 2 days off goes to the VLM, which reads the proof, then through 13 rule stages, and is approved automatically.">
+          <div class="trace-head">
+            <p class="mono-sm muted"><span data-i18n="trace.caption">Trace · leave request</span> <span class="mono">#A-117</span></p>
+            <button type="button" class="trace-replay js-only" data-i18n-attr="aria-label:trace.replayAria" aria-label="Replay pipeline trace"><svg aria-hidden="true" focusable="false"><use href="#i-replay"/></svg><span data-i18n="trace.replay">Replay</span></button>
+          </div>
+          <div class="trace-body">
+            <ol class="trace-track">
+              <li class="node"><span class="node-label mono-sm" data-i18n="trace.n1">Request</span><span class="node-sub small" data-i18n="trace.n1s">"2 days off, Mon–Tue"</span></li>
+              <li class="node"><span class="node-label mono-sm" data-i18n="trace.n2">VLM reads proof</span><span class="node-sub small" data-i18n="trace.n2s">Qwen2.5-VL</span></li>
+              <li class="node"><span class="node-label mono-sm" data-i18n="trace.n3">13 rule stages</span><span class="node-sub small" data-i18n="trace.n3s">dates · balance · notice · capacity</span></li>
+              <li class="node node--success"><svg aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span class="node-label mono-sm" data-i18n="trace.n4">Approved</span><span class="node-sub small" data-i18n="trace.n4s">automatically</span></li>
+            </ol>
+            <span class="trace-dot" aria-hidden="true"></span>
+          </div>
+        </figure>
+
+        <dl class="stats">
+          <div class="stat"><dt class="small muted" data-i18n="stat.gpa">GPA · UIT Honors Program</dt><dd class="stat-num mono tnum">9.04/10</dd></div>
+          <div class="stat"><dt class="small muted" data-i18n="stat.voi">VOI national prizes (2024, 2025)</dt><dd class="stat-num mono tnum">2×</dd></div>
+          <div class="stat"><dt class="small muted" data-i18n="stat.tests">automated tests across 2 projects</dt><dd class="stat-num mono tnum">371</dd></div>
+          <div class="stat"><dt class="small muted" data-i18n="stat.ielts">IELTS Academic</dt><dd class="stat-num mono tnum">7.5</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section id="work" aria-labelledby="work-title">
+      <div class="container">
+        <h2 id="work-title" data-i18n="work.title">Selected work</h2>
+        <p class="section-lead" data-i18n="work.lead">Four systems, each with a deterministic layer the model can't override.</p>
+        <div class="cases">
+
+          <article class="case case--featured" id="work-pnkk" aria-labelledby="work-pnkk-title">
+            <div class="case-grid">
+              <div class="case-text">
+                <p class="mono-sm muted" data-i18n="pnkk.meta">2026 · AI &amp; Backend Developer · team of 4</p>
+                <h3 id="work-pnkk-title" data-i18n="pnkk.title">The Escalation Referee</h3>
+                <p class="case-sub muted" data-i18n="pnkk.sub">AI-powered leave approval (PNKK)</p>
+                <p class="case-lead" data-i18n="pnkk.lead">The LLM never makes the decision. A 13-stage rule engine based on the Vietnam Labor Code 2019 does.</p>
+                <ul class="bullets">
+                  <li data-i18n="pnkk.b1">13 validation stages covering 8 leave types (Labor Code 2019 Arts. 112, 115; Social Insurance Law 2024); every failure maps to one of 30 error codes.</li>
+                  <li data-i18n="pnkk.b2">Qwen2.5-VL, served locally with Ollama, only reads supporting documents — type, dates, names, leave days.</li>
+                  <li data-i18n="pnkk.b3">An LLM agent parses natural-language requests, drafts escalations for the right approver and processes their reply; annual leave up to 2 days auto-approves when rules pass.</li>
+                  <li data-i18n="pnkk.b4">FastAPI/SQLite backend, 3-mode web app (Staff, Manager, Test), Docker Compose, 225 automated test functions and a 37-case correctness suite.</li>
+                </ul>
+                <ul class="chips">
+                  <li class="chip mono-sm tnum" data-i18n="pnkk.m1">13 stages</li>
+                  <li class="chip mono-sm tnum" data-i18n="pnkk.m2">8 leave types</li>
+                  <li class="chip mono-sm tnum" data-i18n="pnkk.m3">30 error codes</li>
+                  <li class="chip mono-sm tnum" data-i18n="pnkk.m4">225 tests</li>
+                  <li class="chip mono-sm tnum" data-i18n="pnkk.m5">37-case suite</li>
+                </ul>
+                <p class="tags mono-sm muted">Python · FastAPI · SQLite · Ollama · Qwen2.5-VL · LLM agents · Docker Compose</p>
+                <p class="muted small" data-i18n="work.private">Private team repository</p>
+              </div>
+              <figure class="pipeline">
+                <figcaption class="sr-only" data-i18n="pnkk.diagramCaption">Decision pipeline of The Escalation Referee</figcaption>
+                <ol>
+                  <li class="node"><span class="node-label mono-sm" data-i18n="pnkk.d1">Natural-language request</span><span class="node-sub small" data-i18n="pnkk.d1s">LLM agent parses it</span></li>
+                  <li class="node"><span class="node-label mono-sm" data-i18n="pnkk.d2">Proof documents</span><span class="node-sub small" data-i18n="pnkk.d2s">Qwen2.5-VL reads them</span></li>
+                  <li class="node"><span class="node-label mono-sm" data-i18n="pnkk.d3">Rule engine</span><span class="node-sub small" data-i18n="pnkk.d3s">13 stages · Labor Code 2019</span></li>
+                  <li class="node-fork">
+                    <ul>
+                      <li class="node node--success"><svg aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span class="node-label mono-sm" data-i18n="pnkk.ok">Auto-approve</span><span class="node-sub small" data-i18n="pnkk.okS">annual leave ≤ 2 days</span></li>
+                      <li class="node node--warn"><svg aria-hidden="true" focusable="false"><use href="#i-flag"/></svg><span class="node-label mono-sm" data-i18n="pnkk.esc">Escalate</span><span class="node-sub small" data-i18n="pnkk.escS">to the right approver</span></li>
+                    </ul>
+                  </li>
+                </ol>
+              </figure>
+            </div>
+          </article>
+
+          <article class="case" id="work-datamate" aria-labelledby="work-datamate-title">
+            <div class="case-grid">
+              <div class="case-text">
+                <p class="mono-sm muted" data-i18n="dm.meta">2026 · AI Developer · competition project</p>
+                <h3 id="work-datamate-title" data-i18n="dm.title">DataMate 2.0</h3>
+                <p class="case-sub muted" data-i18n="dm.sub">Vietnamese Text-to-SQL question answering · Zalo AI Challenge 2026</p>
+                <p class="case-lead" data-i18n="dm.lead">When two model answers disagree, the system abstains — because a wrong answer costs more than no answer.</p>
+                <ul class="bullets">
+                  <li data-i18n="dm.b1">Offline pipeline turning Vietnamese business questions into DuckDB SQL/Python over CSV, Excel and SQLite, with Qwen2.5-Coder-14B-Instruct-AWQ inside the 15B-parameter limit.</li>
+                  <li data-i18n="dm.b2">Safe-abstain strategy protects a +1/−1/0 penalized-accuracy score.</li>
+                  <li data-i18n="dm.b3">Sandboxed executor (whitelisted builtins, no network), deterministic data cleaning, Vietnamese text normalization and date resolution.</li>
+                  <li data-i18n="dm.b4">146 unit tests cover the deterministic layers and run without a GPU or LLM.</li>
+                </ul>
+                <ul class="chips">
+                  <li class="chip mono-sm tnum" data-i18n="dm.m1">≤15B params</li>
+                  <li class="chip mono-sm tnum" data-i18n="dm.m2">offline</li>
+                  <li class="chip mono-sm tnum" data-i18n="dm.m3">146 unit tests (no GPU needed)</li>
+                  <li class="chip mono-sm tnum" data-i18n="dm.m4">+1/−1/0 scoring</li>
+                </ul>
+                <p class="tags mono-sm muted">Python · DuckDB · Qwen2.5-Coder · Text-to-SQL · sandboxing</p>
+                <p class="case-links"><a class="btn btn--secondary btn--sm" href="https://github.com/25520969-netizen/Datamate" target="_blank" rel="noopener"><span data-i18n="cta.github">View on GitHub</span><svg aria-hidden="true" focusable="false"><use href="#i-external"/></svg><span class="sr-only" data-i18n="a11y.newTab">(opens in a new tab)</span></a></p>
+              </div>
+              <figure class="pipeline">
+                <figcaption class="sr-only" data-i18n="dm.diagramCaption">Question-answering pipeline of DataMate 2.0</figcaption>
+                <ol>
+                  <li class="node"><span class="node-label mono-sm" data-i18n="dm.d1">Vietnamese question</span><span class="node-sub small" data-i18n="dm.d1s">CSV · Excel · SQLite data</span></li>
+                  <li class="node"><span class="node-label mono-sm" data-i18n="dm.d2">Normalize text</span><span class="node-sub small" data-i18n="dm.d2s">resolve dates</span></li>
+                  <li class="node"><span class="node-label mono-sm" data-i18n="dm.d3">Qwen2.5-Coder-14B-AWQ</span><span class="node-sub small" data-i18n="dm.d3s">2 candidate programs</span></li>
+                  <li class="node"><span class="node-label mono-sm" data-i18n="dm.d4">Sandboxed executor</span><span class="node-sub small" data-i18n="dm.d4s">DuckDB · no network</span></li>
+                  <li class="node-fork">
+                    <ul>
+                      <li class="node node--success"><svg aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span class="node-label mono-sm" data-i18n="dm.ok">Answer</span><span class="node-sub small" data-i18n="dm.okS">both results agree</span></li>
+                      <li class="node node--warn"><svg aria-hidden="true" focusable="false"><use href="#i-flag"/></svg><span class="node-label mono-sm" data-i18n="dm.abs">Abstain</span><span class="node-sub small" data-i18n="dm.absS">results disagree</span></li>
+                    </ul>
+                  </li>
+                </ol>
+              </figure>
+            </div>
+          </article>
+
+          <article class="case" id="work-retrieval" aria-labelledby="work-retrieval-title">
+            <div class="case-grid">
+              <div class="case-text">
+                <p class="mono-sm muted" data-i18n="vr.meta">2026 · AI &amp; Backend Developer · team of 4</p>
+                <h3 id="work-retrieval-title" data-i18n="vr.title">Video Retrieval System</h3>
+                <p class="case-sub muted" data-i18n="vr.sub">K2PN · AI Challenge HCMC 2026</p>
+                <p class="case-lead" data-i18n="vr.lead">Find the right 5 clips out of a large video corpus from one sentence.</p>
+                <ul class="bullets">
+                  <li data-i18n="vr.b1">Two-stage text-to-video retrieval: bi-encoder query embedding, Milvus vector search (top 50), cross-encoder reranking (top 5).</li>
+                  <li data-i18n-html="vr.b2">Results resolved to video metadata in Elasticsearch and served through FastAPI/Uvicorn (<code>/retrieve</code>, <code>/health</code>).</li>
+                  <li data-i18n="vr.b3">Models, index settings and top-k configurable through environment variables.</li>
+                </ul>
+                <ul class="chips">
+                  <li class="chip mono-sm tnum" data-i18n="vr.m1">top-50 → top-5</li>
+                  <li class="chip mono-sm tnum" data-i18n="vr.m2">2-stage retrieval</li>
+                  <li class="chip mono-sm tnum" data-i18n="vr.m3">env-configurable</li>
+                </ul>
+                <p class="tags mono-sm muted">Milvus · Elasticsearch · FastAPI · Uvicorn · PyTorch</p>
+                <p class="case-links"><a class="btn btn--secondary btn--sm" href="https://github.com/25520969-netizen/AIC2026" target="_blank" rel="noopener"><span data-i18n="cta.github">View on GitHub</span><svg aria-hidden="true" focusable="false"><use href="#i-external"/></svg><span class="sr-only" data-i18n="a11y.newTab">(opens in a new tab)</span></a></p>
+              </div>
+              <figure class="pipeline">
+                <figcaption class="sr-only" data-i18n="vr.diagramCaption">Retrieval pipeline of the Video Retrieval System</figcaption>
+                <ol>
+                  <li class="node"><span class="node-label mono-sm" data-i18n="vr.d1">Text query</span><span class="node-sub small" data-i18n="vr.d1s">one sentence</span></li>
+                  <li class="node"><span class="node-label mono-sm" data-i18n="vr.d2">Bi-encoder</span><span class="node-sub small" data-i18n="vr.d2s">query embedding</span></li>
+                  <li class="node"><span class="node-label mono-sm" data-i18n="vr.d3">Milvus vector search</span><span class="node-sub small" data-i18n="vr.d3s">top 50</span></li>
+                  <li class="node"><span class="node-label mono-sm" data-i18n="vr.d4">Cross-encoder rerank</span><span class="node-sub small" data-i18n="vr.d4s">top 5</span></li>
+                  <li class="node"><span class="node-label mono-sm" data-i18n="vr.d5">Elasticsearch</span><span class="node-sub small" data-i18n="vr.d5s">video metadata</span></li>
+                  <li class="node"><span class="node-label mono-sm" data-i18n="vr.d6">FastAPI</span><span class="node-sub small" data-i18n="vr.d6s">/retrieve</span></li>
+                </ol>
+              </figure>
+            </div>
+          </article>
+
+          <article class="case" id="work-gym" aria-labelledby="work-gym-title">
+            <div class="case-grid">
+              <div class="case-text">
+                <p class="mono-sm muted" data-i18n="gym.meta">2026 · Full-stack &amp; Algorithm Developer · personal project</p>
+                <h3 id="work-gym-title" data-i18n="gym.title">Smart Gym Coach</h3>
+                <p class="case-sub muted" data-i18n="gym.sub">Workout optimization system · personal project</p>
+                <p class="case-lead" data-i18n="gym.lead">Competitive-programming algorithms, applied to a real training plan.</p>
+                <ul class="bullets">
+                  <li data-i18n="gym.b1">FastAPI REST APIs on MongoDB Atlas track fatigue, recovery windows and weekly frequency across 19 muscle targets; responsive SPA with live recovery analytics.</li>
+                </ul>
+                <ul class="chips">
+                  <li class="chip mono-sm tnum" data-i18n="gym.m1">19 muscle targets</li>
+                  <li class="chip mono-sm tnum" data-i18n="gym.m2">real-time generation</li>
+                </ul>
+                <p class="tags mono-sm muted">FastAPI · MongoDB Atlas · C++-style DP · JS SPA</p>
+                <p class="case-links"><a class="btn btn--secondary btn--sm" href="https://github.com/25520969-netizen/Gym-Coach" target="_blank" rel="noopener"><span data-i18n="cta.github">View on GitHub</span><svg aria-hidden="true" focusable="false"><use href="#i-external"/></svg><span class="sr-only" data-i18n="a11y.newTab">(opens in a new tab)</span></a></p>
+              </div>
+              <div class="algo-wrap">
+                <table class="algo">
+                  <caption class="sr-only" data-i18n="gym.algoCaption">Problems in Smart Gym Coach and the algorithms that solve them</caption>
+                  <thead>
+                    <tr><th scope="col" class="mono-sm" data-i18n="gym.colProblem">Problem</th><th scope="col" class="mono-sm" data-i18n="gym.colAlgo">Algorithm</th><th scope="col" class="mono-sm" data-i18n="gym.colCx">Complexity</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td data-i18n="gym.a1p">Fit the best workout into your time</td><td data-i18n="gym.a1alg">0/1 Knapsack DP</td><td class="mono tnum">O(n·T)</td></tr>
+                    <tr><td data-i18n="gym.a2p">Adapt the routine on the fly</td><td data-i18n="gym.a2alg">Greedy + Max Heap</td><td class="mono tnum">O(n log n)</td></tr>
+                    <tr><td data-i18n="gym.a3p">Swap in an equivalent exercise</td><td data-i18n="gym.a3alg">BFS over an exercise graph</td><td class="mono tnum">O(V + E)</td></tr>
+                    <tr><td data-i18n="gym.a4p">Search autocomplete</td><td data-i18n="gym.a4alg">Trie</td><td class="mono tnum">O(m)</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <h2 id="skills-title" data-i18n="skills.title">Skills</h2>
+        <dl class="skills">
+          <div class="skill-row">
+            <dt class="mono-sm" data-i18n="skills.g.backend">Backend</dt>
+            <dd class="skill-list">Python · FastAPI · Uvicorn · REST APIs · SQLite · MongoDB Atlas · Docker · Linux · Git/GitHub</dd>
+            <dd class="proven"><span class="small muted" data-i18n="skills.proven">Proven in</span> <a href="#work-pnkk">PNKK</a>, <a href="#work-retrieval">Retrieval</a>, <a href="#work-gym">Gym</a></dd>
+          </div>
+          <div class="skill-row">
+            <dt class="mono-sm" data-i18n="skills.g.ai">AI / LLM</dt>
+            <dd class="skill-list">LLM agents · VLM (Qwen2.5-VL) · Text-to-SQL · prompt design · PyTorch · Deep Learning</dd>
+            <dd class="proven"><span class="small muted" data-i18n="skills.proven">Proven in</span> <a href="#work-pnkk">PNKK</a>, <a href="#work-datamate">DataMate</a></dd>
+          </div>
+          <div class="skill-row">
+            <dt class="mono-sm" data-i18n="skills.g.search">Search &amp; data</dt>
+            <dd class="skill-list">Milvus · Elasticsearch · DuckDB · vector search + reranking · data augmentation</dd>
+            <dd class="proven"><span class="small muted" data-i18n="skills.proven">Proven in</span> <a href="#work-retrieval">Retrieval</a>, <a href="#work-datamate">DataMate</a></dd>
+          </div>
+          <div class="skill-row">
+            <dt class="mono-sm" data-i18n="skills.g.vision">Vision/Speech</dt>
+            <dd class="skill-list">OCR · Pose Estimation · NMT</dd>
+          </div>
+          <div class="skill-row">
+            <dt class="mono-sm" data-i18n="skills.g.algo">Algorithms</dt>
+            <dd class="skill-list">C++ · Dynamic Programming · Graphs · Greedy · complexity analysis</dd>
+            <dd class="proven"><span class="small muted" data-i18n="skills.proven">Proven in</span> <a href="#work-gym">Gym</a>, <a href="#honors">VOI</a></dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section id="honors" aria-labelledby="honors-title">
+      <div class="container">
+        <h2 id="honors-title" data-i18n="honors.title">Competitive programming &amp; honors</h2>
+        <p class="section-lead" data-i18n="honors.lead">Two-time VOI national prize winner. The same habits — proving correctness, counting complexity — go into the systems above.</p>
+        <ol class="timeline">
+          <li><time class="mono tnum">2025</time><span data-i18n="honors.voi">Consolation Prize — Vietnam National Olympiad in Informatics (VOI)</span></li>
+          <li><time class="mono tnum">2025</time><span data-i18n="honors.prov1">First Prize — Ba Ria–Vung Tau Provincial Informatics Competition</span></li>
+          <li><time class="mono tnum">2025</time><span data-i18n="honors.ielts">IELTS Academic 7.5 overall</span></li>
+          <li><time class="mono tnum">2024</time><span data-i18n="honors.voi">Consolation Prize — Vietnam National Olympiad in Informatics (VOI)</span></li>
+          <li><time class="mono tnum">2024</time><span data-i18n="honors.prov2">Second Prize — Ba Ria–Vung Tau Provincial Informatics Competition</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="about" aria-labelledby="about-title">
+      <div class="container">
+        <h2 id="about-title" data-i18n="about.title">About</h2>
+        <div class="about-grid">
+          <div class="avatar"><span class="avatar-tile" aria-hidden="true">VHK</span></div>
+          <div class="about-text">
+            <p class="lead" data-i18n="about.p1">I'm a second-year Computer Science (Honors) student at UIT – VNU-HCM, and I like building AI and backend systems that actually run end to end.</p>
+            <p class="lead" data-i18n="about.p2">My background is competitive programming, so I treat a model like any other component: give it a narrow job, wrap it in deterministic checks, and test it.</p>
+          </div>
+        </div>
+        <div class="edu">
+          <h3 data-i18n="about.eduTitle">Education</h3>
+          <div class="edu-row">
+            <p data-i18n="about.uni">University of Information Technology, VNU-HCM</p>
+            <p class="mono tnum">2025 – 2029</p>
+          </div>
+          <p class="muted" data-i18n="about.edu">B.S. Computer Science · Honors Program · GPA 9.04/10</p>
+        </div>
+        <p class="avail"><span class="avail-dot" aria-hidden="true"></span><span data-i18n="about.avail">Available for freelance: AI integration · APIs · data processing</span></p>
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 id="contact-title" data-i18n="contact.title">Let's build something that works.</h2>
+        <p class="section-lead" data-i18n="contact.lead">Open to internships and freelance AI-integration, API and data-processing work. I usually reply within 24 hours.</p>
+        <p class="email-lg-row"><span id="email-contact" class="mono email-lg">vohoangkim3103@gmail.com</span></p>
+        <div class="contact-row">
+          <button type="button" class="btn btn--secondary js-only" data-copy="email-contact"><svg aria-hidden="true" focusable="false"><use href="#i-copy"/></svg><span data-i18n="cta.copy">Copy email</span></button>
+          <a class="btn btn--primary" href="mailto:vohoangkim3103@gmail.com"><span data-i18n="cta.send">Send email</span></a>
+        </div>
+        <div class="contact-row">
+          <a class="url contact-github" href="https://github.com/25520969-netizen" target="_blank" rel="noopener"><span>github.com/25520969-netizen</span><svg aria-hidden="true" focusable="false"><use href="#i-external"/></svg><span class="sr-only" data-i18n="a11y.newTab">(opens in a new tab)</span></a>
+        </div>
+        <div class="contact-row">
+          <a class="btn btn--secondary" href="assets/cv/VoHoangKim_CV.pdf" download><svg aria-hidden="true" focusable="false"><use href="#i-download"/></svg><span data-i18n="cta.cv">Download CV</span><span class="mono-sm cv-size" data-cv-size>PDF · ~69 KB</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><span data-i18n="footer.copy">© 2026 Vo Hoang Kim</span> · <span data-i18n="footer.built">Built with plain HTML, CSS and JS · Hosted on GitHub Pages</span></p>
+      <p><a href="#top"><span data-i18n="footer.top">Back to top</span> ↑</a></p>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Vo Hoang Kim",
+    "alternateName": "Võ Hoàng Kim",
+    "jobTitle": "AI & Backend Developer",
+    "url": "https://25520969-netizen.github.io/portfolio/",
+    "email": "mailto:vohoangkim3103@gmail.com",
+    "alumniOf": {"@type": "CollegeOrUniversity", "name": "University of Information Technology, VNU-HCM"},
+    "sameAs": ["https://github.com/25520969-netizen"]
+  }
+  </script>
+</body>
+</html>
